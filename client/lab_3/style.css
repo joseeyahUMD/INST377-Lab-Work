@@ -240,6 +240,7 @@ div.carousel {
     - ... there's a reason crop tools are popular in image editors
    */
   width: 150px; 
+  height: 150px;
 }
 
 .prev,
