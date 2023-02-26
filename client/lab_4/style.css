@@ -117,7 +117,7 @@ form {
 */
 
 .box {
-  background-color: rgba(239, 239, 239, 0.40);
+  
   border: 2px dashed;
   border-radius: 4px;
 
@@ -128,7 +128,7 @@ form {
 }
 
 .left_section {
-  background-color: rgba(115, 221, 170, 0.847);
+  background-color: rgba(6, 173, 178, 0.718);
   flex: 0 1 auto;
   margin: 1rem;
   padding: 1.5rem;
@@ -154,13 +154,14 @@ form {
 .footer {
   flex-shrink: 0;
   padding: 1rem;
-  background-color: rgba(0, 139, 139, 0.8);
+  background-color: #f3f6ff;
   font-size: 1.2rem;
   font-weight: 600;
+  
 }
 
 .footer a {
-  color: rgba(255, 224, 138, 1);
+  color: rgb(0, 0, 0);
   text-decoration: underline;
 }
 
