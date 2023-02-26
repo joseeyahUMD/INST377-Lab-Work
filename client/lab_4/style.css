@@ -30,7 +30,7 @@ body {
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  background-color: rgb(239, 239, 239);
+  background-color: rgba(46, 203, 211, 0.385);
 }
 
 
@@ -92,7 +92,7 @@ form {
   /* this will push other blocks out of the way */
 
   /* colors */
-  background-color: #ffe08a;
+  background-color: #f3f6ff;
   color: #4a4a4a;
 
   /* shapes */
@@ -128,17 +128,18 @@ form {
 }
 
 .left_section {
-  background-color: rgba(222, 173, 198, 0.8);
+  background-color: rgba(115, 221, 170, 0.847);
   flex: 0 1 auto;
   margin: 1rem;
   padding: 1.5rem;
 }
 
 .right_section {
-  background-color: rgba(18, 145, 170, 0.625);
+  background-color: rgba(6, 173, 178, 0.718);
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
+  justify-content: center;
   max-width: 450px;
   display: flex;
   flex-direction: column;
@@ -307,6 +308,9 @@ form label {
     /* Rules in here will only apply when a screen is the correct size */
     /* check it out by using your developer tools to shrink your screen-size */
     .container {
-      background-color: rgba(204, 8, 162, 0.65);
+      background-color: rgba(46, 203, 211, 0.385);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 }
