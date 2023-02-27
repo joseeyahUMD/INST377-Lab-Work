@@ -100,7 +100,7 @@ form {
   font-size: 1.5rem;
   padding: 1.25rem;
   margin:0; /* removing the margin on h1 tags means the header pins to the top if we move */
-
+  border: 2px dashed;
 
   /* box-shadows are fancy */
   box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
@@ -152,16 +152,19 @@ form {
 */
 
 .footer {
-  flex-shrink: 0;
-  padding: 1rem;
-  background-color: #f3f6ff;
-  font-size: 1.2rem;
-  font-weight: 600;
+    flex-shrink: 0;
+    padding: 1rem;
+    background-color: #6e8be1;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px dashed;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    margin-top: auto;
   
 }
 
 .footer a {
-  color: rgb(0, 0, 0);
+  color: rgb(199, 0, 0);
   text-decoration: underline;
 }
 
