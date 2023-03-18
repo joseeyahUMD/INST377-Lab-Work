@@ -69,17 +69,7 @@ async function mainEvent() { // the async keyword means we can make API requests
     console.log(newList);
     
   })
-  /*
-    Now that you HAVE a list loaded, write an event listener set to your filter button
-    it should use the 'new FormData(target-form)' method to read the contents of your main form
-    and the Object.fromEntries() method to convert that data to an object we can work with
-
-    When you have the contents of the form, use the placeholder at line 7
-    to write a list filter
-
-    Fire it here and filter for the word "pizza"
-    you should get approximately 46 results
-  */
+  
 }
 
 /*
