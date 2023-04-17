@@ -35,7 +35,6 @@ function filterList(list, query) {
 async function mainEvent() {
   // the async keyword means we can make API requests
   const mainForm = document.querySelector(".main_form"); // This class name needs to be set on your form before you can listen for an event on it
-  const filterButton = document.querySelector("#filter");
   const loadDataButton = document.querySelector("#data_load");
   const generateListButton = document.querySelector("#generate");
   const textField = document.querySelector("#resto");
@@ -44,7 +43,12 @@ async function mainEvent() {
   loadAnimation.style.display = "none";
   generateListButton.classList.add("hidden")
 
-  let storedList = [];
+  const storedData = localStorage.getItem('storedData');
+  const parsedData = JSON.parse(storedData);
+  if (parsedData.length > 0) {
+    generateListButton.classList.remove("hidden");
+  }
+
 
   let currentList = []; // this is "scoped" to the main event function
 
@@ -59,32 +63,15 @@ async function mainEvent() {
     );
 
     // This changes the response from the GET into data we can use - an "object"
-    storedList = await results.json();
-
-    if (storedList.length > 0) {
-      generateListButton.classList.remove("hidden");
-    }
+    const storedList = await results.json();
+    localStorage.setItem("storedData", JSON.stringify(storedList));
 
     loadAnimation.style.display = "none";
-    console.table(storedList);
-  });
-
-  filterButton.addEventListener("click", (event) => {
-    console.log("clicked filterButton");
-    const formData = new FormData(mainForm);
-    const formProps = Object.fromEntries(formData);
-
-    console.log(formProps);
-
-    const newList = filterList(currentList, formProps.resto);
-
-    console.log(newList);
-    injectHTML(newList);
   });
 
   generateListButton.addEventListener("click", (event) => {
     console.log("generate new list");
-    currentList = cutRestaurantList(storedList);
+    currentList = cutRestaurantList(parsedData);
     console.log(currentList);
     injectHTML(currentList);
   });
